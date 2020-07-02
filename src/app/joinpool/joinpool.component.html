@@ -1,0 +1,21 @@
+<br><br><br>
+<div class="head"><h3>AVAILABLE POOLS</h3></div>
+<br><br>
+<div *ngFor="let pool of pools"> -->
+<mat-card class="example-card">
+<pre><p><b>{{pool.from}} > {{pool.to}}</b>                          <a class="a" mat-button><b>Join Pool</b></a></p></pre>
+<h5><b>{{pool.name}}'s Cab</b></h5>
+<hr>
+<mat-card-content>
+<pre><b>
+Leaves On           At               Vacancy
+{{pool.date}}      {{pool.time}}         {{pool.vacancy}}             
+</b></pre>
+</mat-card-content>
+</mat-card>
+<br><br>
+</div>
+<br><br>
+<router-outlet></router-outlet>
+
+

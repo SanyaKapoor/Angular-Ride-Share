@@ -1,0 +1,23 @@
+<br><br><br>
+<div class="head"><h3>PAST RIDES</h3></div>
+<br><br>
+<div *ngFor="let i of [0,1]">
+<mat-card class="example-card">
+<p><b>JAIPUR > DELHI</b></p>
+<h5><b>Garima's Cab</b></h5>
+<hr>
+<mat-card-content>
+<pre><b>
+Leaves On           At            
+Fri, 12 May         5:40 PM       
+</b></pre>
+</mat-card-content>
+  <mat-card-footer class="footer">
+  <mat-card-actions align=end>
+    <a mat-button (click)="openDialog()"><mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon></a>
+  </mat-card-actions>
+  </mat-card-footer>
+</mat-card>
+<br><br><br>
+</div>
+<router-outlet></router-outlet>

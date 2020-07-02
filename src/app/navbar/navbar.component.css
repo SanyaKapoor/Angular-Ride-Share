@@ -1,0 +1,10 @@
+.spacer{
+    flex: 1 1 auto;
+}
+.navbar-item{
+    width: 46px;
+    height: 10 px;
+    border-radius: 50%;
+    margin-top: -6px;
+    opacity: 1;
+}

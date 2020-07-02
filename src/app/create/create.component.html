@@ -1,0 +1,67 @@
+    <h2><p class="one">ENTER THE TRAVEL DETAILS</p></h2>
+    <h4><p class="three">WHERE TO ?</p></h4>
+
+   <div class="a">
+       <mat-form-field  >
+        <mat-label></mat-label>
+        <mat-select>
+          <mat-option value="option">Delhi</mat-option>
+          <mat-option value="option">NIIT University</mat-option>
+          <mat-option value="option">Gurgaon</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+
+    <h4><p class="four">WHERE FROM ?</p></h4>
+
+    <div class="b">
+        <mat-form-field >
+         <mat-label></mat-label>
+         <mat-select>
+           <mat-option value="option">Delhi</mat-option>
+           <mat-option value="option">NIIT University</mat-option>
+           <mat-option value="option">Gurgaon</mat-option>
+         </mat-select>
+       </mat-form-field>
+     </div>
+
+
+    <h4><p class="five">WHEN ?</p></h4>
+    
+    <div class="c">
+        <mat-form-field  class="v">
+            <input matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <!-- <div class="c">
+        <mat-form-field appearance="fill">
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          </div> -->
+
+    <h4><p class="six">VACANCY ?</p></h4>
+    <div class="d">
+        <mat-form-field >
+         <mat-label></mat-label>
+         <mat-select>
+           <mat-option value="option">1</mat-option>
+           <mat-option value="option">2</mat-option>
+           <mat-option value="option">3</mat-option>
+         </mat-select>
+       </mat-form-field>
+     </div>
+
+     <div>
+        <button mat-raised-button color="warn" class="two" class="e"> SUBMIT </button>
+     </div>
+      <p style="font-size:x-small;position: absolute;top:13.5cm ;left: 500px;"><i>
+         YOU WILL BE ABLE TO EDIT YOUR POOL IN "MY RIDES" AFTER CREATING POOL.</i></p>
+
+         <p style="font-size:large;position: absolute;top: 15cm;left: 500px;"> Contact us: help@rideshare.com | Support our cause:</p>
+     <router-outlet></router-outlet>

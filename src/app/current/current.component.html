@@ -1,0 +1,24 @@
+<br><br><br>
+<div class="head"><h3>CURRENT POOLS</h3></div>
+<br><br>
+<mat-card class="example-card">
+<p><b>JAIPUR > DELHI</b></p>
+<h5><b>Garima's Cab</b></h5>
+<hr>
+<mat-card-content>
+<pre><b>
+Leaves On        At            Vacancy       {{title}}   
+Fri, 12 May      5:40 PM       2             {{number}}
+</b></pre>
+</mat-card-content>
+  <mat-card-footer class="footer">
+  <mat-card-actions align=end>
+    <a mat-button (click)="openDialog1()"><mat-icon aria-hidden="false" aria-label="create">create</mat-icon></a>
+    <a mat-button (click)="openDialog()"><mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon></a>
+  </mat-card-actions>
+  </mat-card-footer>
+</mat-card>
+<br><br><br><br>
+<div class="head"><a mat-button href="pastrides"><h3>VIEW PAST RIDES</h3></a></div>
+<router-outlet></router-outlet>
+
