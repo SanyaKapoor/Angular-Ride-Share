@@ -12,4 +12,8 @@ export class DialogExampleComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  delete(){
+    
+  }
+
 }

@@ -1,0 +1,23 @@
+.form1 {
+    margin: 0 auto;
+    width: 500px;
+    padding: 1em;
+    border: 2px solid #000000;
+    border-radius: 2em;
+    text-align: center;
+    box-sizing: border-box;
+    height: 350px;
+    margin-top : 4.5vw;
+    background-color: rgb(2, 15, 85);
+    }
+
+    .main1 {
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        flex-direction:row;
+        width: 100vw;
+        margin-top: 3.5vw;
+        color: #0b0c50;
+        text-align: center;
+    }

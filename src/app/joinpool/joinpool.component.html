@@ -1,19 +1,24 @@
+<app-navbar></app-navbar>
 <br><br><br>
 <div class="head"><h3>AVAILABLE POOLS</h3></div>
 <br><br>
-<div *ngFor="let pool of pools"> -->
+<div *ngFor="let pool of pools">
+    <ng-container *ngIf ="(pool.vacancy != pool.participants.length)">
 <mat-card class="example-card">
-<pre><p><b>{{pool.from}} > {{pool.to}}</b>                          <a class="a" mat-button><b>Join Pool</b></a></p></pre>
+<pre><p><b>{{pool.from}} > {{pool.to}}</b></p></pre>
 <h5><b>{{pool.name}}'s Cab</b></h5>
-<hr>
 <mat-card-content>
 <pre><b>
-Leaves On           At               Vacancy
-{{pool.date}}      {{pool.time}}         {{pool.vacancy}}             
+    <table>
+        <tr><th>Leaves On</th><th>At</th><th>Vacancy</th></tr>
+        <tr><td>{{pool.date}}</td><td>{{pool.time}}</td><td>{{pool.vacancy}}</td></tr>
+    </table>        
 </b></pre>
+<a class="a" mat-stroked-button [disabled]="clicked" (click)="join(pool); clicked=true;"  ><b>Join Pool</b></a>
 </mat-card-content>
 </mat-card>
 <br><br>
+</ng-container>
 </div>
 <br><br>
 <router-outlet></router-outlet>

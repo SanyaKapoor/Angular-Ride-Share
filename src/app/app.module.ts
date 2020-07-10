@@ -5,6 +5,10 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDialogModule} from '@angular/material/dialog';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { UserhomeComponent } from './userhome/userhome.component';
+import { UserService} from './user.service';
 
 import { AppRoutingModule,routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +24,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {PoolService} from './shared/pool.service';
 import {HttpClientModule} from '@angular/common/http';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +34,11 @@ import {HttpClientModule} from '@angular/common/http';
     DialogExampleComponent,
     DisplayRequestsComponent,
     routingComponents,
+    LoginComponent,
+    RegisterComponent,
+    UserhomeComponent,
+    AboutComponent
+    
   ],
   entryComponents: [
     DialogExampleComponent,
@@ -42,13 +53,19 @@ import {HttpClientModule} from '@angular/common/http';
     MatIconModule,
     MatDialogModule,
     MatFormFieldModule,
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     MatInputModule,
     MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [MatDatepickerModule, PoolService],
+  providers: [MatDatepickerModule, PoolService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

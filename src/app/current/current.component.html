@@ -1,24 +1,51 @@
+<app-navbar></app-navbar>
 <br><br><br>
-<div class="head"><h3>CURRENT POOLS</h3></div>
+
+
+<div class="head"><h3>ACCEPTED REQUESTS</h3></div>
 <br><br>
+<ng-container *ngFor="let pool of pools">
+<ng-container *ngIf="pool.participants[0] === username || pool.participants[1] === username || pool.participants[2] === username ">
 <mat-card class="example-card">
-<p><b>JAIPUR > DELHI</b></p>
-<h5><b>Garima's Cab</b></h5>
-<hr>
+<pre><p><b>{{pool.from}} > {{pool.to}}</b></p></pre>
+<h5><b>{{pool.name}}'s Cab</b></h5>
 <mat-card-content>
 <pre><b>
-Leaves On        At            Vacancy       {{title}}   
-Fri, 12 May      5:40 PM       2             {{number}}
+Leaves On           At               Vacancy
+{{pool.date}}      {{pool.time}}         {{pool.vacancy}}             
+</b></pre>
+<b><h4 style="color:rgb(39, 218, 23)">Welcome, {{username}}!</h4></b>
+</mat-card-content>
+</mat-card>
+</ng-container>
+<br><br>
+</ng-container>
+
+<div class="head"><h3>CURRENT POOLS</h3></div>
+<br><br>
+
+<ng-container *ngFor="let pool of pools">
+<ng-container *ngIf="pool.name === username">
+<mat-card class="example-card">
+<pre><p><b>{{pool.from}} > {{pool.to}}</b></p></pre>
+<h5><b>{{pool.name}}'s Cab</b></h5>
+<mat-card-content>
+<pre><b>
+Leaves On           At               Vacancy
+{{pool.date}}      {{pool.time}}         {{pool.vacancy}}             
 </b></pre>
 </mat-card-content>
-  <mat-card-footer class="footer">
-  <mat-card-actions align=end>
-    <a mat-button (click)="openDialog1()"><mat-icon aria-hidden="false" aria-label="create">create</mat-icon></a>
-    <a mat-button (click)="openDialog()"><mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon></a>
-  </mat-card-actions>
-  </mat-card-footer>
 </mat-card>
+<mat-card-footer class="footer">
+<mat-card-actions align=end>
+        <button (click)="openDialog1(pool._id)">update</button>
+<!-- <a mat-button (click)="openDialog1(pool)"><mat-icon aria-hidden="false" aria-label="create">create</mat-icon></a> -->
+<button (click)="delete(pool._id)">delete</button>
+</mat-card-actions>
+</mat-card-footer>
+</ng-container>
+</ng-container>
+
 <br><br><br><br>
 <div class="head"><a mat-button href="pastrides"><h3>VIEW PAST RIDES</h3></a></div>
 <router-outlet></router-outlet>
-

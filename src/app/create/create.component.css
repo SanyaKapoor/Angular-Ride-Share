@@ -1,58 +1,69 @@
 .one {
-      text-align: center;
-      padding-top: 2cm;
-    }
-    .three {
-      position:absolute;
-      left:13.5cm;
-      top:6.5cm;
-    }
-    .a {
-      position:absolute;
-      left:700px;
-      top:6cm;
-    }
+  text-align: center;
+  padding-top: 2cm;
+}
+.three {
+  position:absolute;
+  left:13.5cm;
+  top:6.5cm;
+}
+.a {
+  position:absolute;
+  left:700px;
+  top:6cm;
+}
 
-    .four {
-      position:absolute;
-      left:13.5cm;
-      top:7.5cm;
-    }
-    .b {
-      position:absolute;
-      left:700px;
-      top:7cm;
-    }
-    .five {
-      position:absolute;
-      left:13.5cm;
-      top:8.5cm;
-    }
-    
-    .c {
-      position:absolute;
-      left:700px;
-      top:8cm;
-    }
+.four {
+  position:absolute;
+  left:13.5cm;
+  top:7.5cm;
+}
+.b {
+  position:absolute;
+  left:700px;
+  top:7cm;
+}
+.five {
+  position:absolute;
+  left:13.5cm;
+  top:8.5cm;
+}
 
-    .v{
-        width:180px
-    }
+.c {
+  position:absolute;
+  left:700px;
+  top:8cm;
+}
 
-    .six {
-      position:absolute;
-      left:13.5cm;
-      top:9.5cm;
-    }
-    
-    .d {
-      position:absolute;
-      left:700px;
-      top:9cm;
-    }
+.v{
+    width:180px
+}
 
-    .e {
-     position:absolute;
-      left:650px;
-      top:12cm;
-    }
+.six {
+  position:absolute;
+  left:13.5cm;
+  top:9.5cm;
+}
+
+.d {
+  position:absolute;
+  left:700px;
+  top:9cm;
+}
+
+.e {
+ position:absolute;
+  left:650px;
+  top:12cm;
+}
+
+.spacer{
+  flex: 1 1 auto;
+}
+.navbar-item{
+  width: 46px;
+  height: 10 px;
+  border-radius: 50%;
+  margin-top: -6px;
+  opacity: 1;
+}

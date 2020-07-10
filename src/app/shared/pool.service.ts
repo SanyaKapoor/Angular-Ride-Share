@@ -6,10 +6,10 @@ import {Pool} from '../pool'
   providedIn: 'root'
 })
 export class PoolService {
+  pool:Pool;
   private baseUri:string="http://localhost:3000";
   private headers = new HttpHeaders().set('Content-Type','application/json');
   constructor(private http:HttpClient) { }
-
 
   createPool(pool:Pool){
     return this.http.post(this.baseUri+'/create',pool,{headers:this.headers});
@@ -28,5 +28,13 @@ export class PoolService {
   }
   addParticipant(pool:Pool){
     return this.http.put(this.baseUri+'/addParticipant/',pool,{headers:this.headers});
+  }
+
+  setter(pool:Pool){
+    this.pool=pool;
+  }
+
+  getter(){
+    return this.pool;
   }
 }

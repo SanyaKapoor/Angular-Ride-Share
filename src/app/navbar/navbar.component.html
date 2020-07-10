@@ -7,11 +7,11 @@
 
 <div class="spacer"></div>
 
-<a><button mat-button>HOME</button></a>
+<a mat-button href="about" >HOME</a>
 <a mat-button href="joinpool">JOIN POOL</a>
 <a mat-button  href="createpool">CREATE POOL</a>
 <a mat-button href="currentpool">MY RIDES</a>
-<a><button mat-button>LOGOUT</button></a>
+<a mat-button (click)="logout()" >LOGOUT</a>
 
 </mat-toolbar>
 <router-outlet></router-outlet>

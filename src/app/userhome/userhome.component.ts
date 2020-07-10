@@ -3,18 +3,19 @@ import { UserService } from '../user.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  selector: 'app-userhome',
+  templateUrl: './userhome.component.html',
+  styleUrls: ['./userhome.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class UserhomeComponent implements OnInit {
 
   username:String = 'guest';
+
   constructor(private _user:UserService, private _router:Router) {
     this._user.user()
     .subscribe(
       data => this.addName(data),
-      error=>this._router.navigate(['/login']),
+      error =>this._router.navigate(['/login'])
     )
    }
 
@@ -32,6 +33,5 @@ export class NavbarComponent implements OnInit {
       error=>console.error(error)
     )
   }
-
 
 }
