@@ -3,7 +3,6 @@
 
 
 <div class="head"><h3>ACCEPTED REQUESTS</h3></div>
-<br><br>
 <ng-container *ngFor="let pool of pools">
 <ng-container *ngIf="pool.participants[0] === username || pool.participants[1] === username || pool.participants[2] === username ">
 <mat-card class="example">
@@ -22,10 +21,9 @@ Leaves On           At
 </ng-container>
 
 <div class="head"><h3>CURRENT POOLS</h3></div>
-<br><br>
-
 <ng-container *ngFor="let pool of pools">
 <ng-container *ngIf="pool.name === username">
+                <br><br>
 <mat-card class="example-card">
 <pre><p><b>{{pool.from}} > {{pool.to}}</b></p></pre>
 <h5><b>{{pool.name}}'s Cab</b></h5>
@@ -42,6 +40,7 @@ Leaves On           At               Vacancy
 <!-- <button (click)="delete(pool._id)">delete</button> -->
 </mat-card-actions>
 </mat-card>
+<br>
 </ng-container>
 </ng-container>
 
