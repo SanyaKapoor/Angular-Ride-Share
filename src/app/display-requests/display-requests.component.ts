@@ -17,14 +17,14 @@ export class DisplayRequestsComponent implements OnInit {
 
   ngOnInit(): void {
     this.pool=this._poolService.getter();
-    //var id = this.data['id'];
   }
 
   accept(participant){
-    this.pool.participants=[participant];
+    this.pool.participants=participant;
     this._poolService.addParticipant(this.pool).subscribe(
       data =>{
         console.log(data);
+        this.router.navigate['/currentpools'];
       } ,
       error=>{
         console.log(error);
@@ -33,40 +33,14 @@ export class DisplayRequestsComponent implements OnInit {
   }
 
   reject(participant){
-    this.pool.participants=[participant];
+    this.pool.participants=participant;
     this._poolService.deleteParticipant(this.pool).subscribe(
       data =>{
         console.log(data);
-        this.pools=data['msg'];
+        this.router.navigate['/currentpools'];
       } ,
       error=>{
         console.log(error);
       })
-    // )
-    // this.router.navigate['/currentpools'];
   }
-
-  // reject(participant){
-  //   this.pool.participants=[participant];
-  //   this.pool=this._poolService.deleteParticipant(this.pool);
-  //   this.pool=this._poolService.getter();
-  //   this.router.navigate(["/currentpool"]);
-
-  // }
-
-
-  // update(string){
-  //   if(string === 'add'):
-
-  //   this._poolService.addParticipant('').subscribe(
-  //     data =>{
-  //       console.log(data);
-  //       this.pools=data['msg'];
-  //     } ,
-  //     error=>{
-  //       console.log(error);
-  //     }
-  //   )
-  // }
-
 }

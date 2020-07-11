@@ -5,12 +5,12 @@
 
     <form [formGroup]="createForm">
 
-        <div class="form-group">
+        <div class="form-group" class="a">
             <input formControlName="name" type="text" class="form-control" placeholder="Enter name">
                       </div>
 
         <h4><p class="three">WHERE TO?</p></h4>
-        <div class="form-group">
+        <div class="form-group" class="a">
              <mat-select formControlName="to" class="form-control">
                <mat-option value="DELHI">Delhi</mat-option>
                <mat-option value="NU">NIIT University</mat-option>
@@ -19,7 +19,7 @@
           </div>
 
         <h4><p class="four">WHERE FROM?</p></h4>
-        <div class="form-group">
+        <div class="form-group" class="b">
              <mat-select formControlName="from" class="form-control">
                <mat-option value="DELHI">Delhi</mat-option>
                <mat-option value="NU">NIIT University</mat-option>
@@ -29,18 +29,18 @@
   
       <h4><p class="five">WHEN?</p></h4>
 
-          <div class="form-group">
+          <div class="form-group" class="c">
                 <input [matDatepicker]="picker" formControlname="date" class="form-control">
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
             </div>
- 
-            <div class="form-group">
+            
+            <div class="form-group" class="d">
                 <input formControlName="time" type="text" class="form-control" placeholder="Enter time">
               </div>
           
       <h4><p class="six">VACANCY ?</p></h4>
-      <div class="form-group">
+      <div class="form-group" class="e">
            <mat-select formControlName="vacancy" class="form-control">
              <mat-option value=1>1</mat-option>
              <mat-option value=2>2</mat-option>
@@ -48,13 +48,13 @@
              </mat-select>
        </div>
 
-      <div class="form-group" style="text-align:center;">
-        <button type="button" class="form-control" (click)="CreateComponent()" >CREATE RIDE</button>
+      <div class="form-group" style="text-align:center; margin-top: 190px">
+        <a mat-stroked-button class="form-control" (click)="CreateComponent()" >CREATE RIDE</a>
       </div>
 
       <p style="font-size:x-small;position: absolute;top:13.5cm ;left: 500px;"><i>
           YOU WILL BE ABLE TO EDIT YOUR POOL IN "MY RIDES" AFTER CREATING POOL.</i></p>
-          <p style="font-size:large;position: absolute;top: 15cm;left: 500px;"> Contact us: help@rideshare.com | Support our cause:</p>
+          <!-- <p style="font-size:large;position: absolute;top: 15cm;left: 500px;"> Contact us: help@rideshare.com | Support our cause:</p> -->
   
 
     </form>

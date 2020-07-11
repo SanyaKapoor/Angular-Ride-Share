@@ -3,7 +3,7 @@ export class Pool {
     public name:string;
     public from:string;
     public to:string;
-    public date:Date;
+    public date:string;
     public time:string;
     public vacancy:number;
     public participants:Array<String>;

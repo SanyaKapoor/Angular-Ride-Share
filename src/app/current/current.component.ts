@@ -60,11 +60,6 @@ export class CurrentComponent implements OnInit {
   }
   openDialog1(pool){
     this._poolService.setter(pool);
-    // this.dialog.open(DisplayRequestsComponent, {
-    //   data: {
-    //     id: id
-    //   }
-    // });
     this.dialog.open(DisplayRequestsComponent);
   }
 

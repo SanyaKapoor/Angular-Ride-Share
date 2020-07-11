@@ -6,15 +6,15 @@
 <br><br>
 <ng-container *ngFor="let pool of pools">
 <ng-container *ngIf="pool.participants[0] === username || pool.participants[1] === username || pool.participants[2] === username ">
-<mat-card class="example-card">
+<mat-card class="example">
 <pre><p><b>{{pool.from}} > {{pool.to}}</b></p></pre>
 <h5><b>{{pool.name}}'s Cab</b></h5>
 <mat-card-content>
 <pre><b>
-Leaves On           At               Vacancy
-{{pool.date}}      {{pool.time}}         {{pool.vacancy}}             
+Leaves On           At               
+{{pool.date}}      {{pool.time}}                  
 </b></pre>
-<b><h4 style="color:rgb(39, 218, 23)">Welcome, {{username}}!</h4></b>
+<b><pre><h4 style="color:rgb(187, 213, 214)">Welcome, {{username}}!</h4></pre></b>
 </mat-card-content>
 </mat-card>
 </ng-container>
@@ -35,14 +35,13 @@ Leaves On           At               Vacancy
 {{pool.date}}      {{pool.time}}         {{pool.vacancy}}             
 </b></pre>
 </mat-card-content>
-</mat-card>
-<mat-card-footer class="footer">
-<mat-card-actions align=end>
-        <button (click)="openDialog1(pool._id)">update</button>
-<!-- <a mat-button (click)="openDialog1(pool)"><mat-icon aria-hidden="false" aria-label="create">create</mat-icon></a> -->
-<button (click)="delete(pool._id)">delete</button>
+<mat-card-actions class ="footer">
+<a mat-button (click)="openDialog1(pool._id)"><mat-icon aria-hidden="false" aria-label="create">create</mat-icon></a>
+        <!-- <button (click)="openDialog1(pool._id)">update</button> -->
+<a mat-button (click)="delete(pool._id)"><mat-icon aria-hidden="false" aria-label="delete">delete</mat-icon></a>
+<!-- <button (click)="delete(pool._id)">delete</button> -->
 </mat-card-actions>
-</mat-card-footer>
+</mat-card>
 </ng-container>
 </ng-container>
 
