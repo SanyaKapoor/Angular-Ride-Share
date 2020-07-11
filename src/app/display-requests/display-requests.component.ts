@@ -11,8 +11,8 @@ import {Router} from '@angular/router';
   styleUrls: ['./display-requests.component.css']
 })
 export class DisplayRequestsComponent implements OnInit {
-  public pools:Pool[];
-  public pool: any;
+  // public pools:Pool[];
+  pool;
   constructor(@Inject(MAT_DIALOG_DATA) public data: any, public _poolService:PoolService, private router:Router) { }
 
   ngOnInit(): void {
