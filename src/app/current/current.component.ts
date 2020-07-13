@@ -55,9 +55,9 @@ export class CurrentComponent implements OnInit {
     
   }
   
-  openDialog(){
-    this.dialog.open(DialogExampleComponent);
-  }
+  // openDialog(){
+  //   this.dialog.open(DialogExampleComponent);
+  // }
   openDialog1(pool){
     this._poolService.setter(pool);
     this.dialog.open(DisplayRequestsComponent);

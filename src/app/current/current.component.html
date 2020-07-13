@@ -1,7 +1,5 @@
 <app-navbar></app-navbar>
-<br><br><br>
-
-
+<br><br>
 <div class="head"><h3>ACCEPTED REQUESTS</h3></div>
 <ng-container *ngFor="let pool of pools">
 <ng-container *ngIf="pool.participants[0] === username || pool.participants[1] === username || pool.participants[2] === username ">
@@ -19,7 +17,6 @@ Leaves On           At
 </ng-container>
 <br><br>
 </ng-container>
-
 <div class="head"><h3>CURRENT POOLS</h3></div>
 <ng-container *ngFor="let pool of pools">
 <ng-container *ngIf="pool.name === username">
@@ -30,11 +27,11 @@ Leaves On           At
 <mat-card-content>
 <pre><b>
 Leaves On           At               Vacancy
-{{pool.date}}      {{pool.time}}         {{pool.vacancy}}             
+{{pool.date}}         {{pool.time}}           {{pool.vacancy}}             
 </b></pre>
 </mat-card-content>
-<mat-card-actions class ="footer">
-<a mat-button (click)="openDialog1(pool._id)"><mat-icon aria-hidden="false" aria-label="create">create</mat-icon></a>
+<mat-card-actions class ="footer" align=end>
+<a mat-button (click)="openDialog1(pool)"><mat-icon aria-hidden="false" aria-label="create">create</mat-icon></a>
         <!-- <button (click)="openDialog1(pool._id)">update</button> -->
 <a mat-button (click)="delete(pool._id)"><mat-icon aria-hidden="false" aria-label="delete">delete</mat-icon></a>
 <!-- <button (click)="delete(pool._id)">delete</button> -->
@@ -45,5 +42,5 @@ Leaves On           At               Vacancy
 </ng-container>
 
 <br><br><br><br>
-<div class="head"><a mat-button href="pastrides"><h3>VIEW PAST RIDES</h3></a></div>
+<div class="head"><a mat-button href="pastrides"><h3><b>VIEW PAST RIDES</b></h3></a></div>
 <router-outlet></router-outlet>

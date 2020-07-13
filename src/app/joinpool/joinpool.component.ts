@@ -22,25 +22,26 @@ export class JoinpoolComponent implements OnInit {
 
   addName(data){
     this.username = data.username;
+    console.log(this.username);
   }
 
   ngOnInit(): void {
     this.readPools();
   }
 
-  join(pool){
+join(pool){
     pool.participants=this.username;
-    this._poolService.addParticipant(pool);
-    // .subscribe(
-    //   data =>{
-    //     console.log(data);
-    //     this.pools=data['msg'];
-    //   } ,
-    //   error=>{
-    //     console.log(error);
-    //   }
-    // )
+    this._poolService.addParticipant(pool).subscribe(
+      data =>{
+        console.log(data);
+        //this.router.navigate['/currentpools'];
+      } ,
+      error=>{
+        console.log(error);
+      }
+    )
   }
+
 
   readPools(){
     this._poolService.readPools().subscribe(

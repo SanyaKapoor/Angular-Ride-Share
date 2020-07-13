@@ -33,11 +33,9 @@
   
       <h4><p class="five">WHEN?</p></h4>
 
-              <mat-form-field class="form-group" class="d" > 
-                <input matInput [matDatepicker]="picker" formControlname="date" class="form-control" placeholder="Required">
-                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
-              </mat-form-field>
+              <div class="form-group" class="d" > 
+                <input formControlName="date" type="text" class="form-control" placeholder="yyyy/mm/dd">
+              </div>
             <h4><p class="seven">AT?</p></h4>
             <div class="form-group" class ="f">
                 <input formControlName="time" type="text" class="form-control" placeholder="xx:xx pm/am">
