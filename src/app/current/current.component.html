@@ -1,6 +1,8 @@
 <app-navbar></app-navbar>
-<br><br>
-<div class="head"><h3>ACCEPTED REQUESTS</h3></div>
+<html style="background-color:rgb(158, 6, 6);">
+<body class="bg">
+<br><br><br><br>
+<!-- <div class="head"><h3>ACCEPTED REQUESTS</h3></div> -->
 <ng-container *ngFor="let pool of pools">
 <ng-container *ngIf="pool.participants[0] === username || pool.participants[1] === username || pool.participants[2] === username ">
 <mat-card class="example">
@@ -43,4 +45,6 @@ Leaves On           At               Vacancy
 
 <br><br><br><br>
 <div class="head"><a mat-button href="pastrides"><h3><b>VIEW PAST RIDES</b></h3></a></div>
+</body>
+</html>
 <router-outlet></router-outlet>

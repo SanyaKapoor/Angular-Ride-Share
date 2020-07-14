@@ -27,3 +27,20 @@
     /* background:white; */
     color:black;
 }
+body,
+html {
+  height: 100%;
+}
+
+.bg {
+    background-color:rgb(158, 6, 6);
+  /* The image used */
+  /* background:url("../../assets/img/myrides.png") repeat rgb(206, 3, 3); */
+  background-image: url("../../assets/img/myrides.png");
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: cover;
+}

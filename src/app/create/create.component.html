@@ -1,15 +1,17 @@
 <app-navbar></app-navbar>
 <br>
+<body class="bg">
+<br>
     
-    <h2><p class="one">ENTER THE TRAVEL DETAILS</p></h2>
-
+    <!-- <h2><p class="one">ENTER THE TRAVEL DETAILS</p></h2> -->
+<br><br>
     <form [formGroup]="createForm">
-        <h4><p class="two">NAME?</p></h4>
+        <h4><p class="two" style="color:aliceblue">NAME?</p></h4>
         <mat-form-field class="form-group" class="a">
             <input matInput formControlName="name" type="text" class="form-control" placeholder="Required">
         </mat-form-field>
 
-        <h4><p class="three">WHERE TO?</p></h4>
+        <h4><p class="three" style="color:aliceblue">WHERE TO?</p></h4>
         <div class="form-group" class="b">
           <mat-form-field>
              <mat-select formControlName="to" class="form-control">
@@ -20,7 +22,7 @@
               </mat-form-field>
           </div>
 
-        <h4><p class="four">WHERE FROM?</p></h4>
+        <h4><p class="four" style="color:aliceblue">WHERE FROM?</p></h4>
         <div class="form-group" class="c">
           <mat-form-field>
              <mat-select formControlName="from" class="form-control" placeholder="Required">
@@ -31,17 +33,17 @@
             </mat-form-field>
          </div>
   
-      <h4><p class="five">WHEN?</p></h4>
+      <h4><p class="five" style="color:aliceblue">WHEN?</p></h4>
 
               <div class="form-group" class="d" > 
                 <input formControlName="date" type="text" class="form-control" placeholder="yyyy/mm/dd">
               </div>
-            <h4><p class="seven">AT?</p></h4>
+            <h4><p class="seven" style="color:aliceblue">AT?</p></h4>
             <div class="form-group" class ="f">
                 <input formControlName="time" type="text" class="form-control" placeholder="xx:xx pm/am">
               </div>
           
-      <h4><p class="six">VACANCY ?</p></h4>
+      <h4><p class="six" style="color:aliceblue">VACANCY ?</p></h4>
       <div class="form-group" class="e">
         <mat-form-field>
            <mat-select formControlName="vacancy" class="form-control" placeholder="Required">
@@ -53,7 +55,7 @@
        </div>
 
       <div class="form-group" style="text-align:center; ">
-        <a mat-stroked-button class="form-control" style="color: brown; margin-top: 13cm" (click)="CreateComponent()" >CREATE RIDE</a>
+        <a mat-stroked-button class="form-control" style="color: rgb(197, 197, 197); margin-top: 14cm" (click)="CreateComponent()" >CREATE RIDE</a>
       </div>
 
       <p style="font-size:x-small;position: absolute;top:20cm ;left: 500px;"><i>
@@ -62,5 +64,5 @@
   
 
     </form>
-
+  </body>
     <router-outlet></router-outlet>
