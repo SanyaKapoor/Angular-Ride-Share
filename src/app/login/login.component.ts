@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
   {
     if(!this.loginForm.valid)
     {
-      alert('Invalid Form');
+      alert('Invalid Form. Either the Form is empty or the email is not in the format student@gmail.com');
       console.log("Invalid Form"); 
       return ;
     }
@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
     this._user.login(JSON.stringify(this.loginForm.value))
     .subscribe(
       data => {console.log(data);this._router.navigate(['/about'])},
-      error => console.log(error)
+      error => {console.log(error); alert('Wrong Login Credentials Provided.');}
     )
   }
 

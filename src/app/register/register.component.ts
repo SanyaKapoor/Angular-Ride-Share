@@ -42,7 +42,7 @@ export class RegisterComponent implements OnInit {
     this._userService.register(JSON.stringify(this.registerForm.value))
     .subscribe(
       data=> {console.log(data); this._router.navigate(['/login']);},
-      error=> {console.log(error);}
+      error=> {console.log(error); alert('Wrong Login Credentials Provided.');}
     )
     console.log(JSON.stringify(this.registerForm.value));
   }
