@@ -1,17 +1,19 @@
 <div class="main">
-  <p>{{pool}}</p>
 <h3 mat-dialog-title><b>PRESENT CANDIDATES</b></h3>
-<div>Garima
-<a mat-button ><mat-icon class="b" aria-hidden="false" aria-label="create">close</mat-icon></a>
+<div *ngFor="let i of pool.participants">
+{{i}}
+<a mat-button (click)="reject(i)"><mat-icon class="b" aria-hidden="false" aria-label="create">close</mat-icon></a>
 </div>
 <br>
 <h3 mat-dialog-title><b>REQUESTS</b></h3>
-<span mat-dialog-content>Sakshi
-<a mat-button><mat-icon class="a" aria-hidden="true" aria-label="create">check</mat-icon></a>
-<a mat-button><mat-icon class="b" aria-hidden="false" aria-label="create">close</mat-icon></a>
+<span *ngIf="checkParticipant(title1)" mat-dialog-content>Rishikesh
+<a mat-button (click)="accept(title1)"><mat-icon class="a" aria-hidden="true" aria-label="create">check</mat-icon></a>
+<a mat-button (click)="reject(title1)"><mat-icon class="b" aria-hidden="false" aria-label="create">close</mat-icon></a>
 </span>
-<span mat-dialog-content>Sanya
-<a mat-button ><mat-icon class="a" aria-hidden="true" aria-label="create">check</mat-icon></a>
-<a mat-button ><mat-icon class="b" aria-hidden="false" aria-label="create">close</mat-icon></a>
+<ng-container *ngIf="checkParticipant(title)">
+<span *ngIf="checkParticipant(title)" mat-dialog-content>Sanya
+<a mat-button (click)="accept(title)"><mat-icon class="a" aria-hidden="true" aria-label="create">check</mat-icon></a>
+<a mat-button (click)="reject(title)"><mat-icon class="b" aria-hidden="false" aria-label="create">close</mat-icon></a>
 </span> 
+</ng-container>
 </div>

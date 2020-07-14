@@ -7,13 +7,14 @@
 <mat-card class="example-card">
 <pre><p><b>{{pool.from}} > {{pool.to}}</b></p></pre>
 <h5><b>{{pool.name}}'s Cab</b></h5>
+<hr>
 <mat-card-content>
-<pre><b>
+
     <table>
-        <tr><th>Leaves On</th><th>At</th><th>Vacancy</th></tr>
-        <tr><td>{{pool.date}}</td><td>{{pool.time}}</td><td>{{pool.vacancy}}</td></tr>
+        <tr><th>Leaves On</th><pre> </pre><th>At</th><pre>  </pre><th>Vacancy</th></tr>
+        <tr><td>{{pool.date}}</td><pre>    </pre><td>{{pool.time}}</td><pre>     </pre><td>{{pool.vacancy}}</td></tr>
     </table>        
-</b></pre>
+
 <a class="a" mat-button (click)="join(pool)"><b>Join Pool</b></a>
 </mat-card-content>
 </mat-card>

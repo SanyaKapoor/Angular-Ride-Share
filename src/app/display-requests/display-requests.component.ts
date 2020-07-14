@@ -11,12 +11,15 @@ import {Router} from '@angular/router';
   styleUrls: ['./display-requests.component.css']
 })
 export class DisplayRequestsComponent implements OnInit {
-  // public pools:Pool[];
-  pool;
+  //public pools:Pool[];
+  public pool;
+  title="Sanya";
+  title1="Rishikesh";
   constructor(@Inject(MAT_DIALOG_DATA) public data: any, public _poolService:PoolService, private router:Router) { }
 
   ngOnInit(): void {
     this.pool=this._poolService.getter();
+    console.log(this.pool);
   }
 
   accept(participant){
@@ -31,6 +34,10 @@ export class DisplayRequestsComponent implements OnInit {
       }
     )
   }
+
+  checkParticipant(title){
+    return (this.pool.participants.indexOf(title) < 0)
+    }
 
   reject(participant){
     this.pool.participants=participant;

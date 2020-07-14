@@ -10,7 +10,6 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./create.component.css']
 })
 export class CreateComponent implements OnInit {
-
   pool= new Pool;
   createForm = new FormGroup({
     name:new FormControl(null,[Validators.required]),
