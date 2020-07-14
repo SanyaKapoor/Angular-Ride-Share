@@ -6,7 +6,7 @@
 </div>
 <br>
 <h3 mat-dialog-title><b>REQUESTS</b></h3>
-<span mat-dialog-content>Rishikesh
+<span *ngIf="checkParticipant(title1)" mat-dialog-content>Rishikesh
 <a mat-button (click)="accept(title1)"><mat-icon class="a" aria-hidden="true" aria-label="create">check</mat-icon></a>
 <a mat-button (click)="reject(title1)"><mat-icon class="b" aria-hidden="false" aria-label="create">close</mat-icon></a>
 </span>
