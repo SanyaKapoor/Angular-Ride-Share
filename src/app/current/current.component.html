@@ -1,8 +1,8 @@
 <app-navbar></app-navbar>
 <html style="background-color:rgb(158, 6, 6);">
-<body class="bg">
+<div class="bg">
 <br><br><br><br>
-<!-- <div class="head"><h3>ACCEPTED REQUESTS</h3></div> -->
+<div class="head"><h3><b>JOINED POOLS</b></h3></div>
 <ng-container *ngFor="let pool of pools">
 <ng-container *ngIf="pool.participants[0] === username || pool.participants[1] === username || pool.participants[2] === username ">
 <mat-card class="example">
@@ -17,12 +17,12 @@ Leaves On           At
 </mat-card-content>
 </mat-card>
 </ng-container>
-<br><br>
+<br>
 </ng-container>
-<div class="head"><h3>CURRENT POOLS</h3></div>
+<div class="head"><h3><b>CURRENT POOLS</b></h3></div>
+<br>
 <ng-container *ngFor="let pool of pools">
 <ng-container *ngIf="pool.name === username">
-                <br><br>
 <mat-card class="example-card">
 <pre><p><b>{{pool.from}} > {{pool.to}}</b></p></pre>
 <h5><b>{{pool.name}}'s Cab</b></h5>
@@ -39,12 +39,12 @@ Leaves On           At               Vacancy
 <!-- <button (click)="delete(pool._id)">delete</button> -->
 </mat-card-actions>
 </mat-card>
-<br>
+<br><br><br>
 </ng-container>
 </ng-container>
 
 <br><br><br><br>
 <div class="head"><a mat-button href="pastrides"><h3><b>VIEW PAST RIDES</b></h3></a></div>
-</body>
+</div>
 </html>
 <router-outlet></router-outlet>

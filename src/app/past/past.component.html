@@ -1,7 +1,5 @@
 <app-navbar></app-navbar>
-<br><br><br>
 <div class="head"><h3>PAST RIDES</h3></div>
-<br><br>
 <div *ngFor="let pool of pools">
 <ng-container *ngIf="pool.participants[0] === username || pool.participants[1] === username || pool.participants[2] === username ">
 <ng-container *ngIf="compareDates(pool.date)">
@@ -21,10 +19,8 @@ Leaves On           At
   </mat-card-actions>
   </mat-card-footer>
 </mat-card>
-<br><br>
 </ng-container>
 </ng-container>
-<br><br>
 </div>
 <!-- <ng-container *ngFor="let pool of pools">
 <ng-container *ngIf="pool.participants[0] === username || pool.participants[1] === username || pool.participants[2] === username ">
